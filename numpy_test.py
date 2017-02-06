@@ -72,3 +72,31 @@ print (test_2d[:][2:4])
 # rowwise  ops
 print("_________________________")
 print (test_2d[2] * 2 ) # needs further checking 
+#_______________________________________________________________
+test_2d = np.array([[1,2,4326,6547,2],[3214,235,547,5685,2354],[2345234,625246,3412515,3234,6154]])
+print (test_2d)
+print (test_2d.shape)
+#array. shape prints the struture of the array
+#print 3rd to fifth col of the 2d array
+print (test_2d[:,3:])
+#print  the third row only 
+print (test_2d[2])
+#___________________________________________________________________
+#Numpy Functions :
+#median
+print (np.median(test_2d[1]))
+#mean
+print (np.mean(test_2d[1]))
+#__________________________________________________________________
+# generating data 
+height = np.round(np.random.normal(1.75,0.2,5000))
+print (len(height))
+print (height)
+# generate dummy data for the age array
+age = np.round(np.random.normal(75,20,5000))
+print (len(age))
+print (age)
+# combining the resulting arrays to form a 2d array
+data = np.column_stack((height,age))
+print ([data[1]>50])
+
