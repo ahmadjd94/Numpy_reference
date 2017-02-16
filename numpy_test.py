@@ -109,3 +109,43 @@ print ([data[1]>50])
 ##############################################################
 ##############################################################
 ##############################################################
+#pandas is a powerful csv handeling librarty that is based on numpy 
+#opening a csv file 
+import pandas as ps
+csv_data=ps.read_csv("filename.csv",index_col=0)
+#after reading the file
+#getting an array that indicates if some elements satisfy some condition
+csv_data['col']>10000
+#select every element based on a comparison
+csv_data [csv_data['col']>10000]
+#inserting a new column inside the reader object
+csv_data['new-col']=csv_data['some_col'] *4132
+#########################################
+#dealing with dates in pandas 
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################
+###############################################
+###############################################
+###################side notes##################
+###############################################
+###############################################
+###############################################
+from datetime import datetime
+a=datetime.now()
+a.strftime()
+#########this should be done with a map ??
+csv_data['date']=datetime.strptime(str(csv_data['sale_date']),'%a %b %d %H:%M:%S EDT %Y')
+
+
